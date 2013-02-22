@@ -36,7 +36,7 @@ Or install it yourself as:
 
 An example inclusion in your application.js file:
 
-```sass
+```javascript
 //= require jsboot
 
 window.MyApp = {};
