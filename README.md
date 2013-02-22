@@ -1,6 +1,22 @@
 # Jsboot::Rails
 
-TODO: Write a gem description
+A small solution for removing all inline javascript from your views.
+
+This gem provides a small `jsboot` javascript file for use in the asset
+pipeline.
+
+The basic principal is that rather than bootstrapping json with inline
+script tags, you use script tags of type `application/json` and include
+a json data structure inside the tag.  The id for the tag is used to
+lookup a callback function to find the js to bootstrap for the page
+uniquely.
+
+By not using inline javascript in your views, the gain is twofold:
+
+* You no longer clutter your html with script tags
+* More importantly, you can implement Content Security Policy to deny
+  inline script tags, drastically narrowing the chance for XSS attacks
+  against the site.
 
 ## Installation
 
@@ -18,7 +34,28 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+An example inclusion in your application.js file:
+
+```sass
+//= require jsboot
+
+window.MyApp = {};
+Jsboot(window.MyApp, jQuery);
+
+MyApp.jsboot.addCallback("posts-show", function(data) {
+  console.log(data);
+});
+```
+
+and in your view
+
+```ruby
+# posts-show is used to build an id, followed by data hash
+<%= jsboot_data_tag("posts-show", {:foo => "bar"}) %>
+```
+
+The `jsboot_data_tag` is a helper provided that will convert objects
+to json.  Passed data must respond to `#to_json`
 
 ## Contributing
 
