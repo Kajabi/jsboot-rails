@@ -42,7 +42,7 @@ An example inclusion in your application.js file:
 window.MyApp = {};
 Jsboot(window.MyApp, jQuery);
 
-MyApp.jsboot.addCallback("posts-show", function(data) {
+MyApp.jsboot.addCallback("posts#show", function(data) {
   console.log(data);
 });
 ```
@@ -51,7 +51,8 @@ and in your view
 
 ```ruby
 # The data followed by a key, posts-show, used to build an id
-<%= jsboot_data_tag({:foo => "bar"}, "posts-show") %>
+# If no key is provided it will default to controller#action
+<%= jsboot_data_tag({:foo => "bar"}, "posts#show") %>
 ```
 
 The `jsboot_data_tag` is a helper provided that will convert objects
