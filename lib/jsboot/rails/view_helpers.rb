@@ -2,7 +2,7 @@ module Jsboot
   module Rails
 
     module ViewHelpers
-      def jsboot_data_tag(key, data)
+      def jsboot_data_tag(data, key)
         id = "jsboot-#{key}"
         content_tag :script, :id => id, :class => "jsboot-data", :type => "application/json" do
           jsboot_json_escape data.to_json.html_safe

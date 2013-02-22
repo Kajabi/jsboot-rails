@@ -50,8 +50,8 @@ MyApp.jsboot.addCallback("posts-show", function(data) {
 and in your view
 
 ```ruby
-# posts-show is used to build an id, followed by data hash
-<%= jsboot_data_tag("posts-show", {:foo => "bar"}) %>
+# The data followed by a key, posts-show, used to build an id
+<%= jsboot_data_tag({:foo => "bar"}, "posts-show") %>
 ```
 
 The `jsboot_data_tag` is a helper provided that will convert objects
