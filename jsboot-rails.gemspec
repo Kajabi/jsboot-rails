@@ -4,8 +4,8 @@ require File.expand_path('../lib/jsboot/rails/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Brendon Murphy"]
   gem.email         = ["xternal1+github@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{a small solution for removing all inline javascript from your views}
+  gem.summary       = %q{a small solution for removing all inline javascript from your views}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
