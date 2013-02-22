@@ -8,6 +8,7 @@ function Jsboot(app, $) {
   // data object that is stored in the inline
   // application/json script tags
   jsb.addCallback = function(key, fun) {
+    key = key.replace('#', '-');
     jsb.callbacks['jsboot-' + key] = fun;
   };
 

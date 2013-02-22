@@ -4,6 +4,7 @@ module Jsboot
     module ViewHelpers
       def jsboot_data_tag(data, key)
         id = "jsboot-#{key}"
+        id.tr!('#', '-')
         content_tag :script, :id => id, :class => "jsboot-data", :type => "application/json" do
           jsboot_json_escape data.to_json.html_safe
         end
