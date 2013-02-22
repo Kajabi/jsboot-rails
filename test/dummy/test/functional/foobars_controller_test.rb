@@ -16,4 +16,12 @@ class FoobarsControllerTest < ActionController::TestCase
       assert_match /\{"replaced":"ok"\}/, tag[0].to_s
     end
   end
+
+  test "jsboot_data_tag will default controller#action as the key" do
+    get :index
+
+    assert_select 'script#jsboot-foobars-index.jsboot-data' do |tag|
+      assert_match /\{"automagic":"key"\}/, tag[0].to_s
+    end
+  end
 end
