@@ -1,0 +1,2 @@
+class FoobarsController < ApplicationController
+end

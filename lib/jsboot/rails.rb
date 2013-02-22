@@ -1,4 +1,5 @@
 require "jsboot/rails/engine"
+require "jsboot/rails/railtie"
 require "jsboot/rails/version"
 require "jsboot/rails/view_helpers"
 
