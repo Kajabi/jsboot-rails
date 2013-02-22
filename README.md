@@ -14,8 +14,8 @@ uniquely.
 By not using inline javascript in your views, the gain is twofold:
 
 * You no longer clutter your html with script tags
-* More importantly, you can implement Content Security Policy to deny
-  inline script tags, drastically narrowing the chance for XSS attacks
+* More importantly, you can implement [Content Security Policy](http://en.wikipedia.org/wiki/Content_Security_Policy)
+  to deny inline script tags, drastically narrowing the chance for XSS attacks
   against the site.
 
 ## Installation
