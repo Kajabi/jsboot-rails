@@ -7,7 +7,7 @@ function Jsboot(app, $) {
   // callback functions expect one parameter, a
   // data object that is stored in the inline
   // application/json script tags
-  jsb.addCallback = function(key, fun) {
+  jsb.on = function(key, fun) {
     key = key.replace('#', '-');
     jsb.callbacks['jsboot-' + key] = fun;
   };

@@ -42,7 +42,7 @@ An example inclusion in your application.js file:
 window.MyApp = {};
 Jsboot(window.MyApp, jQuery);
 
-MyApp.jsboot.addCallback("posts#show", function(data) {
+MyApp.jsboot.on("posts#show", function(data) {
   console.log(data);
 });
 ```
