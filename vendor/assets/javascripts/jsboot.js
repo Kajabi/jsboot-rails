@@ -20,7 +20,13 @@ function Jsboot(app, $) {
 
     if (typeof(fun) === 'function') {
       jsonText = $el.html();
-      data = JSON.parse(jsonText);
+
+      if (jsonText === "") {
+        data = {};
+      } else {
+        data = JSON.parse(jsonText);
+      }
+
       fun(data);
     }
   };
