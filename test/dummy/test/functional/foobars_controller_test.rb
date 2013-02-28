@@ -24,4 +24,12 @@ class FoobarsControllerTest < ActionController::TestCase
       assert_match /\{"automagic":"key"\}/, tag[0].to_s
     end
   end
+
+  test "jsboot_data_tag will ensure {} as the data" do
+    get :index
+
+    assert_select 'script#jsboot-no-data.jsboot-data' do |tag|
+      assert_match /\{}/, tag[0].to_s
+    end
+  end
 end

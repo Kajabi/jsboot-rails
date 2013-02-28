@@ -2,7 +2,8 @@ module Jsboot
   module Rails
 
     module ViewHelpers
-      def jsboot_data_tag(data, key = jsboot_default_key)
+      def jsboot_data_tag(data = {}, key = jsboot_default_key)
+        data ||= {}
         id = "jsboot-#{key}"
         id.tr!('#', '-')
 
