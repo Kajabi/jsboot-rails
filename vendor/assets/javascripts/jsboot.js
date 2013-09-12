@@ -35,8 +35,6 @@ function Jsboot(app, $) {
     $('script.jsboot-data').each(function(idx, el){
       jsb.runBootstrapping(el);
     });
-
-    Object.freeze(jsb.callbacks);
   };
 
   $(function(){
