@@ -15,6 +15,6 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Jsboot::Rails::VERSION
 
-  gem.add_dependency "rails", "~> 3.2.12"
+  gem.add_dependency "rails", "> 3.2.12"
   gem.add_development_dependency "sqlite3"
 end
