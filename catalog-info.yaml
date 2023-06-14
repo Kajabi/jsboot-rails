@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: jsboot-rails
+  description: |
+    A small solution for removing all inline javascript from your views.
+  annotations:
+    backstage.io/source-location: url:https://github.com/Kajabi/jsboot-rails/tree/master
+    github.com/project-slug: Kajabi/jsboot-rails
+spec:
+  system: kajabi-products
+  type: gem
+  owner: standard-model
+  lifecycle: production
